@@ -7,8 +7,8 @@
     <ProjectGuid>{BB1DFC8C-4235-4B22-83C7-D3906D0A6D1D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Aula5.Console</RootNamespace>
-    <AssemblyName>Aula5.Console</AssemblyName>
+    <RootNamespace>Aula5.Exercicio</RootNamespace>
+    <AssemblyName>Aula5.Exercicio</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cidade.cs" />
+    <Compile Include="IPersistencia.cs" />
+    <Compile Include="PersistenciaCidade.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

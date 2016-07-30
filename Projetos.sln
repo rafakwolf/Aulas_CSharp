@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula04.Exercicio", "Aula04.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula06", "Aula06\Aula06.csproj", "{8F694500-1CC7-4E8E-913E-E1B3EBE1266A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula05.Console", "Aula5.Console\Aula05.Console.csproj", "{BB1DFC8C-4235-4B22-83C7-D3906D0A6D1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula05.Exercicio", "Aula5.Console\Aula05.Exercicio.csproj", "{BB1DFC8C-4235-4B22-83C7-D3906D0A6D1D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula07", "Aula07\Aula07.csproj", "{FFCE2007-B442-40E7-A9D2-7717AA556C19}"
 EndProject

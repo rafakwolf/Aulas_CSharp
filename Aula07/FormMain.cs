@@ -40,7 +40,7 @@ namespace Aula07
         {
             if (_cidadeBusca == null)
             {
-                lbxCidades.Items.Add("Buscque um registro primeiro");
+                lbxCidades.Items.Add("Busque um registro primeiro");
                 return;
             }
 

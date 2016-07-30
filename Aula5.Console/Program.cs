@@ -1,85 +1,110 @@
-﻿using System.Collections;
+﻿using System;
 
-namespace Aula5.Console
+namespace Aula5.Exercicio
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //System.Console.WriteLine("Digite a primeira string:");
-            //var s1 = System.Console.ReadLine();
+            var sair = false;
 
-            //System.Console.WriteLine("Digite a segunda string:");
-            //var s2 = System.Console.ReadLine();
+            var menu = "1 - cadastrar\n" +
+                       "2 - alterar\n"+ 
+                       "3 - excluir\n"+
+                       "4 - imprimir\n" +
+                       "5 - sair\n" +
+                       "Digite uma opção";
 
-            //if (s1.Equals(s2))
-            //{
-            //    System.Console.WriteLine("Valores informados são iguais.");
-            //}
-            //else
-            //{
-            //    System.Console.WriteLine("Valores informados são diferentes.");
-            //}
-
-            //System.Console.ReadKey();
-
-            TesteEquals.Teste();
-        }
-
-        public class Pessoa
-        {
-            private string nome;
-            private int idade;
+            var persistencia = new PersistenciaCidade();
+            Cidade cidade;
+            int codigo;
+            string nome;
+            string estado;
 
 
-            public override string ToString()
+            while (sair == false) // ou !sair 
             {
-                return " Nome: " + nome + " Idade: " + idade;
+
+                Console.WriteLine(menu);
+
+                var op = int.Parse(Console.ReadLine());
+
+                switch (op)
+                {
+                    case 1:
+                        Console.WriteLine("Escreva o códgo");
+                        codigo = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Escreva o nome");
+                        nome = Console.ReadLine();
+                        Console.WriteLine("Escreva o estado");
+                        estado = Console.ReadLine();
+
+                        cidade = new Cidade();
+                        cidade.Codigo = codigo;
+                        cidade.Nome = nome;
+                        cidade.Uf = estado;
+
+                        persistencia.Salvar(cidade);
+
+                        break;
+                    case 2:
+                        Console.WriteLine("Escreva o código");
+                        codigo = int.Parse(Console.ReadLine());
+
+                        cidade = new Cidade {Codigo = codigo};
+
+                        if (persistencia.Consultar(cidade))
+                        {
+                            Console.WriteLine("Escreva um novo nome");
+                            nome = Console.ReadLine();
+
+                            Console.WriteLine("Escreva um novo estado");
+                            estado = Console.ReadLine();
+
+                            cidade.Nome = nome;
+                            cidade.Uf = estado;
+
+                            persistencia.Salvar(cidade);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cidade não encontrada.");
+                        }
+
+                        break;
+                    case 3:
+                        Console.WriteLine("Escreva o código");
+                        codigo = int.Parse(Console.ReadLine());
+                        cidade = new Cidade { Codigo = codigo };
+
+                        if (persistencia.Consultar(cidade))
+                        {
+                            persistencia.Excluir(cidade);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cidade não encontrada.");
+                        }
+                        break;    
+                    case 4:
+                        Console.WriteLine("===Lista de nomes===");
+
+                        var cidades = persistencia.Listar();
+
+                        foreach (var c in cidades)
+                        {
+                            Console.WriteLine(c.ToString());
+                        }
+
+                        Console.WriteLine("====================");
+
+                        break;
+                    case 5:
+                        sair = true;
+                        break;
+                }
+
             }
-
-            public Pessoa(string nome, int idade)
-            {
-                this.nome = nome;
-                this.idade = idade;
-            }
-
-            public override bool Equals(object obj)
-            {
-                return ((Pessoa)obj).idade == this.idade;
-            }
-        }
-
-        public class TesteEquals
-        {
-            public static void Teste()
-            {
-                var dados = new ArrayList();
-
-                Pessoa p1 = new Pessoa("Pessoa 01", 20);
-                Pessoa p2 = new Pessoa("Pessoa 02", 25);
-                Pessoa p3 = new Pessoa("Pessoa 03", 30);
-                Pessoa p4 = new Pessoa("", 30);
-
-                Pessoa p5;
-
-                dados.Add(p1);
-                dados.Add(p2);
-                dados.Add(p3);
-
-                //dados.Remove(p4);
-
-                var indice = dados.IndexOf(p3);
-                p5 = (Pessoa)dados.GetRange(indice,1)[0];
-
-                System.Console.WriteLine(indice);
-                System.Console.WriteLine(p5);
-
-                int total = dados.Count;
-                System.Console.WriteLine(total);
-
-                System.Console.ReadKey();
-            }
-
         }
     }
 }
