@@ -12,15 +12,33 @@ namespace Aula05
 {
     public partial class Form1 : Form
     {
-        private IQueryable<string> _minhaLista = new List<string>();
+
 
 
         public Form1()
         {
             InitializeComponent();
 
-            var listaFiltrada = _minhaLista.FirstOrDefault(x => x.Contains("a"));
+            var p1 = new Pessoa();
 
+            p1.Nome = "teste";
+            p1.CPF = "123456";
+
+
+
+            var p2 = new Pessoa();
+            p2.Nome = "Teste";
+            p2.CPF = "123456";
+
+
+            if (p1.Equals(p2))
+            {
+                MessageBox.Show("é igual");
+            }
+            else
+            {
+                MessageBox.Show("é diferente");
+            }
 
         }
     }

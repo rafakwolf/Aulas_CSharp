@@ -3,5 +3,6 @@
     public interface IPersistencia
     {
         void Inserir();
+        void Editar();
     }
 }

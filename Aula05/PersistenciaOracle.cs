@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+using System.Windows.Forms;
 
 namespace Aula05
 {
-    public class Persistencia : IPersistencia
+    public class PersistenciaOracle : IPersistencia
     {
         public void Editar()
         {
@@ -14,7 +12,7 @@ namespace Aula05
 
         public void Inserir()
         {
-            throw new NotImplementedException();
+            MessageBox.Show("conectei em um banco oracle.");
         }
     }
 }

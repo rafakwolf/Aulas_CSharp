@@ -8,6 +8,7 @@ namespace Aula03
         public FormMain()
         {
             InitializeComponent();
+
         }
 
         int itemNoArray = 0;

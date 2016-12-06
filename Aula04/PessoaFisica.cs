@@ -1,16 +1,17 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace Aula04
 {
-    public class PessoaFisica: Pessoa, IDisposable
+    public class PessoaFisica: Pessoa
     {
         public string CPF { get; set; }
         public string RG { get; set; }
 
-
-        public void Dispose()
+        public override void ImprimeEstudo()
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Estudando C#");
         }
+
     }
 }

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Aula01
@@ -45,7 +39,7 @@ namespace Aula01
             arrayDeInteiros[1] = 100;
             arrayDeInteiros[2] = 200;
 
-            String[] arrayDeString = { "um", "dois", "tres" };
+            string[] arrayDeString = { "um", "dois", "tres" };
             int[] arrayDeInteiro2 = { 10, 100, 200 };
 
             for (int i = 0; i < arrayDeString.Length; i++)
@@ -54,7 +48,7 @@ namespace Aula01
                 + " contem valor " + arrayDeString[i]);
             }
 
-            String[][] matrizDeString = new String[2][];
+            string[][] matrizDeString = new string[2][];
 
             matrizDeString[0] = new string[3];
             matrizDeString[1] = new string[3];
@@ -75,12 +69,15 @@ namespace Aula01
                 }
             }
 
-            string s1 = "meutexto";
+            string s1 = "meu texto";
 
             string s2 = "Meu texto";
 
             s2 = s2 + " concatenado ";
             s2 = s2 + 10;
+
+            Console.WriteLine(s1);
+
             Console.WriteLine(s2);
         }
     }

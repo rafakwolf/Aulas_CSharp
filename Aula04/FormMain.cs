@@ -54,5 +54,27 @@ namespace Aula04
             t.InsereTeste(aluno);
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var p = new PessoaFisica();
+
+            p.Nome = "nome da pessoa";
+            p.Codigo = 1;
+
+            MessageBox.Show( p.ToString() );
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var p = new PessoaJuridica();
+            p.ImprimeEstudo();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PessoaAbstrata aluno = new Aluno();
+            aluno.ImprimeNome();
+        }
     }
 }

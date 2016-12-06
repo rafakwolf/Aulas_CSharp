@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cidade.cs" />
+    <Compile Include="ExemplosListas.cs" />
     <Compile Include="IPersistencia.cs" />
     <Compile Include="PersistenciaCidade.cs" />
     <Compile Include="Program.cs" />

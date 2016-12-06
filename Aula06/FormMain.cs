@@ -11,8 +11,10 @@ namespace Aula06
         public FormMain()
         {
             InitializeComponent();
-            Arquivos();
-            LendoArquivos();
+
+            SerializacaoJson();
+            //Arquivos();
+            //LendoArquivos();
             
         }
 
@@ -95,7 +97,7 @@ namespace Aula06
             }
         }
 
-        private void Arquivos()
+        private void aArquivos()
         {
             var arquivo = File.CreateText("D:\\arquivoTexto.txt");
             arquivo.WriteLine("escrevendo alguma coisa no arquivo");
@@ -198,6 +200,11 @@ namespace Aula06
             Console.WriteLine("");
             Console.WriteLine("Verificando novamente os valores das propriedades: ");
             obj.Print();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            Arquivos.GravarELerArquivo();
         }
     }
 }

@@ -9,13 +9,17 @@
 
         public override bool Equals(object obj)
         {
-            return ((Cidade) obj).Codigo == this.Codigo;
+            return ((Cidade) obj).Codigo == Codigo;
         }
-
 
         public override string ToString()
         {
             return "Código " +Codigo + ", Nome "+Nome+ ", Estado "+Uf;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }

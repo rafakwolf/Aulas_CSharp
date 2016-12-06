@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D0A9B19F-E8F9-4A10-80BA-29A02B4BBB68}</ProjectGuid>
+    <ProjectGuid>{1B5E8464-0F4D-4049-8B87-24E6095EB866}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Aula05</RootNamespace>
-    <AssemblyName>Aula05</AssemblyName>
+    <RootNamespace>Aula5.Telas</RootNamespace>
+    <AssemblyName>Aula5.Telas</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,11 +52,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IPersistencia.cs" />
-    <Compile Include="Persistencia.cs" />
-    <Compile Include="PersistenciaOracle.cs" />
-    <Compile Include="PersistenciaSqlServer.cs" />
-    <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -83,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aula05\Aula05.csproj">
+      <Project>{d0a9b19f-e8f9-4a10-80ba-29a02b4bbb68}</Project>
+      <Name>Aula05</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

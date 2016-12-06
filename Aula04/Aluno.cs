@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Windows.Forms;
 
 namespace Aula04
 {
@@ -6,13 +6,7 @@ namespace Aula04
     {
         public override void ImprimeNome()
         {
-            Console.WriteLine("Nome: "+this.Nome);
-        }
-
-
-        public void teste()
-        {
-            Console.WriteLine("aaaaaaaaaaaaaaaaaaa");
+            MessageBox.Show("Nome: " + this.Nome);
         }
     }
 }

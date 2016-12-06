@@ -11,6 +11,11 @@
             return ((Cidade)obj).Idcidade == this.Idcidade;
         }
 
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         public override string ToString()
         {
             return " Codigo: " + Idcidade +

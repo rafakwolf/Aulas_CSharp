@@ -1,9 +1,11 @@
-﻿namespace Aula03
+﻿using System.Windows.Forms;
+
+namespace Aula03
 {
     public class ExemploConstrutor
     {
-        public int Codigo { private get; set;}
-        public string Nome { private get; set; }
+        public int Codigo { get; set;}
+        public string Nome { get; set; }
 
         public ExemploConstrutor(int codigo, string nome)
         {
