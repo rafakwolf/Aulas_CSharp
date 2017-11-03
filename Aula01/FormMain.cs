@@ -7,7 +7,6 @@ namespace Aula01
     public partial class FormMain : Form
     {
 
-
         List<string> lista = new List<string>();
 
 
@@ -30,7 +29,6 @@ namespace Aula01
             });
 
         }
-
 
         public void iniciaArray()
         {

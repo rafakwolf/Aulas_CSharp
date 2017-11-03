@@ -6,6 +6,7 @@
         {
             var a = new int[6];
             var b = new int[6];
+
             var matrix = new int[6, 2];
 
             for (int i = 0; i < a.Length; i++)
